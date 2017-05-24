@@ -14,6 +14,12 @@
 		03318B9B1ED5A89E003DE862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03318B991ED5A89E003DE862 /* LaunchScreen.storyboard */; };
 		03318BA61ED5A89E003DE862 /* SwiftModelKVCExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BA51ED5A89E003DE862 /* SwiftModelKVCExampleTests.swift */; };
 		03318BB11ED5A89E003DE862 /* SwiftModelKVCExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BB01ED5A89E003DE862 /* SwiftModelKVCExampleUITests.swift */; };
+		03318BC41ED5A90B003DE862 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 03318BBE1ED5A90B003DE862 /* data.json */; };
+		03318BC51ED5A90B003DE862 /* AModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BBF1ED5A90B003DE862 /* AModel.swift */; };
+		03318BC61ED5A90B003DE862 /* BModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC01ED5A90B003DE862 /* BModel.swift */; };
+		03318BC71ED5A90B003DE862 /* PTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC11ED5A90B003DE862 /* PTV.swift */; };
+		03318BC81ED5A90B003DE862 /* SwiftKVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC21ED5A90B003DE862 /* SwiftKVCModel.swift */; };
+		03318BC91ED5A90B003DE862 /* VoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC31ED5A90B003DE862 /* VoiceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		03318BAC1ED5A89E003DE862 /* SwiftModelKVCExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftModelKVCExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03318BB01ED5A89E003DE862 /* SwiftModelKVCExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftModelKVCExampleUITests.swift; sourceTree = "<group>"; };
 		03318BB21ED5A89E003DE862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03318BBE1ED5A90B003DE862 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		03318BBF1ED5A90B003DE862 /* AModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AModel.swift; sourceTree = "<group>"; };
+		03318BC01ED5A90B003DE862 /* BModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BModel.swift; sourceTree = "<group>"; };
+		03318BC11ED5A90B003DE862 /* PTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTV.swift; sourceTree = "<group>"; };
+		03318BC21ED5A90B003DE862 /* SwiftKVCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKVCModel.swift; sourceTree = "<group>"; };
+		03318BC31ED5A90B003DE862 /* VoiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,8 @@
 		03318B8F1ED5A89E003DE862 /* SwiftModelKVCExample */ = {
 			isa = PBXGroup;
 			children = (
+				03318BCB1ED5A927003DE862 /* KVCModel */,
+				03318BCA1ED5A910003DE862 /* example */,
 				03318B901ED5A89E003DE862 /* AppDelegate.swift */,
 				03318B921ED5A89E003DE862 /* ViewController.swift */,
 				03318B941ED5A89E003DE862 /* Main.storyboard */,
@@ -123,6 +137,26 @@
 				03318BB21ED5A89E003DE862 /* Info.plist */,
 			);
 			path = SwiftModelKVCExampleUITests;
+			sourceTree = "<group>";
+		};
+		03318BCA1ED5A910003DE862 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				03318BC31ED5A90B003DE862 /* VoiceModel.swift */,
+				03318BBF1ED5A90B003DE862 /* AModel.swift */,
+				03318BC01ED5A90B003DE862 /* BModel.swift */,
+				03318BBE1ED5A90B003DE862 /* data.json */,
+			);
+			name = example;
+			sourceTree = "<group>";
+		};
+		03318BCB1ED5A927003DE862 /* KVCModel */ = {
+			isa = PBXGroup;
+			children = (
+				03318BC11ED5A90B003DE862 /* PTV.swift */,
+				03318BC21ED5A90B003DE862 /* SwiftKVCModel.swift */,
+			);
+			name = KVCModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +272,7 @@
 				03318B9B1ED5A89E003DE862 /* LaunchScreen.storyboard in Resources */,
 				03318B981ED5A89E003DE862 /* Assets.xcassets in Resources */,
 				03318B961ED5A89E003DE862 /* Main.storyboard in Resources */,
+				03318BC41ED5A90B003DE862 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03318BC81ED5A90B003DE862 /* SwiftKVCModel.swift in Sources */,
+				03318BC91ED5A90B003DE862 /* VoiceModel.swift in Sources */,
+				03318BC51ED5A90B003DE862 /* AModel.swift in Sources */,
+				03318BC71ED5A90B003DE862 /* PTV.swift in Sources */,
 				03318B931ED5A89E003DE862 /* ViewController.swift in Sources */,
+				03318BC61ED5A90B003DE862 /* BModel.swift in Sources */,
 				03318B911ED5A89E003DE862 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DDY242R68;
 				INFOPLIST_FILE = SwiftModelKVCExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gonghao.SwiftModelKVCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4DDY242R68;
 				INFOPLIST_FILE = SwiftModelKVCExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gonghao.SwiftModelKVCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

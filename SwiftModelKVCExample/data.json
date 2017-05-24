@@ -1,0 +1,59 @@
+{
+    "name":"这是用来测试的json",
+    "jsonExtra":"json中多出来的key",
+    "jsonNullDic":null,
+    "jsonNullNum":null,
+    "jsonNullStr":null,
+    "jsonNullArr":null,
+    "jsonIsStringNull":"<null>",
+    "jsonBool":"false",
+    "a":{
+        "name":"Zhangsan",
+        "sex":true,
+        "age":20
+    },
+    "arr":[
+        {
+           "name":"Lisi",
+           "sex":false,
+           "age":22,
+           "birth":"1995-4-6",
+           "address":"Bejing"
+        },
+        {
+           "name":"Wangwu",
+           "sex":false,
+           "age":25,
+           "birth":"2001-4-6",
+           "address":"Tianjin"
+        }
+    ],
+    
+    "subModel":{
+        "name":"子model",
+        "uid":"123"
+    },
+    "subModelList":[
+        {
+            "name":"first",
+            "uid":1
+        },
+        {
+            "name":"second",
+            "uid":2
+        }
+    ],
+    "array":[
+        "fri","non"
+    ],
+    "firstModelList":[
+        { "first":"first", "num": 8},
+        { "first":"second", "num": 9},
+        { "first":"third", "num": 10},
+        { "first":"four", "extra":44, "num":{ "tmp":1 }}
+    ],
+    "dic":{
+        "a":0,
+        "b":1
+    }
+}
