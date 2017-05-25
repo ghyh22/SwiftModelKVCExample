@@ -18,14 +18,22 @@
            "sex":false,
            "age":22,
            "birth":"1995-4-6",
-           "address":"Bejing"
+           "address":"Bejing",
+           "model":{
+                "id":0,
+                "name":"zero"
+           }
         },
         {
            "name":"Wangwu",
            "sex":false,
            "age":25,
            "birth":"2001-4-6",
-           "address":"Tianjin"
+           "address":"Tianjin",
+           "model":{
+                "id":1,
+                "name":"first"
+           }
         }
     ],
     

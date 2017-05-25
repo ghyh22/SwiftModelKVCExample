@@ -1,17 +1,20 @@
 //
-//  AModel.swift
-//  ModelKVC
+//  CModel.swift
+//  SwiftModelKVCExample
 //
-//  Created by 龚浩 on 2017/5/24.
+//  Created by 龚浩 on 2017/5/25.
 //  Copyright © 2017年 龚浩. All rights reserved.
 //
 
 import UIKit
 
-class AModel: NSObject, SwiftKVCModelProtocol {
-    var name = ""
-    var sex = false
-    var age = 0
+class CModel: NSObject,SwiftKVCModelProtocol {
+    var id:Int = 0
+    var name:String = ""
+    
+    override var description: String{
+        return "{ id=\(id), name=\(name) }"
+    }
     
     required override init() {
         super.init()
@@ -20,14 +23,12 @@ class AModel: NSObject, SwiftKVCModelProtocol {
     static func createModel() -> Self {
         return self.init()
     }
+    
     func registerClassList() -> [AnyClass] {
         return []
     }
+    
     func arrayProperTypeList() -> [String : AnyClass] {
         return [:]
-    }
-    
-    override var description: String{
-        return "{ name=\(name), sex=\(sex), age=\(age) }"
     }
 }

@@ -18,14 +18,14 @@ protocol SwiftKVCModelProtocol:NSObjectProtocol {
      
      @return model类列表
      */
-    func registerClassList()->[SwiftKVCModelProtocol]
+    func registerClassList()->[AnyClass]
     
     /**
      注册数组属性所需要的的类型,当model中有属性是数组类型时，指定数组的model类型,model必须遵循本协议
      
      @return 属性名和它对应的类型列表
      */
-    func arrayProperTypeList()->[String:SwiftKVCModelProtocol]
+    func arrayProperTypeList()->[String:AnyClass]
 }
 
 class SwiftKVCModel: NSObject {
@@ -59,25 +59,30 @@ class SwiftKVCModel: NSObject {
     func initPTVList(){
         _ptvList = []
         _properties = []
-        if let cl = (self.model as AnyObject).classForCoder {
+        if var cl = (self.model as AnyObject).classForCoder {
             var len:UInt32 = 0
-            let props = class_copyPropertyList(cl, &len)
             var nilPropers = ""
-            for tmp in 0..<len {
-                let char = property_getName(props?.advanced(by: Int(tmp)).pointee)
-                if let prop = NSString(utf8String: char!) as String? {
-                    if noContaintProp.index(of: prop) == nil {
-                        if let modelValue = self.object.value(forKey: prop) {
-                            let ptv = PTV(name: prop, value: modelValue)
-                            _ptvList.append(ptv)
-                        }else{
-                            nilPropers += prop + ","
+            while cl != NSObject.self {
+                let props = class_copyPropertyList(cl, &len)
+                print("class:", cl)
+                for tmp in 0..<len {
+                    let char = property_getName(props?.advanced(by: Int(tmp)).pointee)
+                    if let prop = NSString(utf8String: char!) as String? {
+                        if noContaintProp.index(of: prop) == nil {
+                            if let modelValue = self.object.value(forKey: prop) {
+                                let ptv = PTV(name: prop, value: modelValue)
+                                _ptvList.append(ptv)
+                            }else{
+                                nilPropers += prop + ","
+                            }
+                            _properties.append(prop)
                         }
-                        _properties.append(prop)
                     }
                 }
+                free(props)
+                cl = class_getSuperclass(cl)
             }
-            free(props)
+            
             if nilPropers.characters.count > 0 {
                 print("\(type(of: self.model))model中有未被初始化的属性:\(nilPropers),将不会被KVC赋值")
             }

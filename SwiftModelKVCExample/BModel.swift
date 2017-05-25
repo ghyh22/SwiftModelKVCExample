@@ -13,7 +13,12 @@ class BModel: AModel {
     
     var birth = ""
     var address = ""
+    var model:CModel = CModel()
     override var description: String{
-        return super.description + ",birth=\(birth), address=\(address)"
+        return "{ name=\(name), sex=\(sex), age=\(age), birth=\(birth), address=\(address), model=\(model) }"
+    }
+    
+    override func registerClassList() -> [AnyClass] {
+        return [CModel.self]
     }
 }

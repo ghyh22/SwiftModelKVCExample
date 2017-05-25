@@ -20,6 +20,7 @@
 		03318BC71ED5A90B003DE862 /* PTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC11ED5A90B003DE862 /* PTV.swift */; };
 		03318BC81ED5A90B003DE862 /* SwiftKVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC21ED5A90B003DE862 /* SwiftKVCModel.swift */; };
 		03318BC91ED5A90B003DE862 /* VoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BC31ED5A90B003DE862 /* VoiceModel.swift */; };
+		03318BCD1ED67978003DE862 /* CModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03318BCC1ED67978003DE862 /* CModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		03318BC11ED5A90B003DE862 /* PTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTV.swift; sourceTree = "<group>"; };
 		03318BC21ED5A90B003DE862 /* SwiftKVCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftKVCModel.swift; sourceTree = "<group>"; };
 		03318BC31ED5A90B003DE862 /* VoiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceModel.swift; sourceTree = "<group>"; };
+		03318BCC1ED67978003DE862 /* CModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				03318BBF1ED5A90B003DE862 /* AModel.swift */,
 				03318BC01ED5A90B003DE862 /* BModel.swift */,
 				03318BBE1ED5A90B003DE862 /* data.json */,
+				03318BCC1ED67978003DE862 /* CModel.swift */,
 			);
 			name = example;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				03318BC81ED5A90B003DE862 /* SwiftKVCModel.swift in Sources */,
 				03318BC91ED5A90B003DE862 /* VoiceModel.swift in Sources */,
 				03318BC51ED5A90B003DE862 /* AModel.swift in Sources */,
+				03318BCD1ED67978003DE862 /* CModel.swift in Sources */,
 				03318BC71ED5A90B003DE862 /* PTV.swift in Sources */,
 				03318B931ED5A89E003DE862 /* ViewController.swift in Sources */,
 				03318BC61ED5A90B003DE862 /* BModel.swift in Sources */,

@@ -14,12 +14,12 @@ class VoiceModel: NSObject,SwiftKVCModelProtocol {
         return self.init()
     }
     
-    func registerClassList() -> [SwiftKVCModelProtocol] {
-        return [AModel.self as! SwiftKVCModelProtocol, BModel.self as! SwiftKVCModelProtocol]
+    func registerClassList() -> [AnyClass] {
+        return [AModel.self, BModel.self]
     }
     
-    func arrayProperTypeList() -> [String : SwiftKVCModelProtocol] {
-        return ["arr":BModel.self as! SwiftKVCModelProtocol]
+    func arrayProperTypeList() -> [String : AnyClass] {
+        return ["arr":BModel.self]
     }
 
     required override init() {
