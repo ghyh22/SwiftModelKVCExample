@@ -34,5 +34,6 @@ class VoiceModel: NSObject,SwiftKVCModelProtocol {
     var jsonIsStringNull = 5
     var jsonBool = true
     var a = AModel()
+    var b = BModel()
     var arr = [BModel]()
 }

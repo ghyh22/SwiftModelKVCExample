@@ -12,6 +12,17 @@
         "sex":true,
         "age":20
     },
+    "b":{
+        "name":"Lily",
+        "sex":true,
+        "age":22,
+        "birth":"1995-4-6",
+        "address":"Bejing",
+        "model":{
+            "id":3,
+            "name":"three"
+        }
+    },
     "arr":[
         {
            "name":"Lisi",

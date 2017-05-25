@@ -11,6 +11,10 @@ import UIKit
 class BModel: AModel {
     typealias MySelf = BModel
     
+    required init() {
+        super.init()
+    }
+    
     var birth = ""
     var address = ""
     var model:CModel = CModel()

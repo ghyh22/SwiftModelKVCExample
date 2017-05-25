@@ -64,7 +64,6 @@ class SwiftKVCModel: NSObject {
             var nilPropers = ""
             while cl != NSObject.self {
                 let props = class_copyPropertyList(cl, &len)
-                print("class:", cl)
                 for tmp in 0..<len {
                     let char = property_getName(props?.advanced(by: Int(tmp)).pointee)
                     if let prop = NSString(utf8String: char!) as String? {
