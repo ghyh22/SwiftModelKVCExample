@@ -76,17 +76,18 @@
             "uid":2
         }
     ],
-    "array":[
-        "fri","non"
-    ],
     "firstModelList":[
         { "first":"first", "num": 8},
         { "first":"second", "num": 9},
         { "first":"third", "num": 10},
         { "first":"four", "extra":44, "num":{ "tmp":1 }}
     ],
+    "array":[
+             "fri","non"
+    ],
     "dic":{
-        "a":0,
-        "b":1
+        "id":0,
+        "name":"name",
+        "sex":false
     }
 }

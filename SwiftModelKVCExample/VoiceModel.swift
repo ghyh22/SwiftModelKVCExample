@@ -44,4 +44,6 @@ class VoiceModel: NSObject,SwiftKVCModelProtocol {
     var c = CModel()
     var arr = [BModel]()
     var bArr = [CModel]()
+    var array = [Any]()
+    var dic = [String:Any]()
 }
