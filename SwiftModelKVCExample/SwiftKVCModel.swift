@@ -201,9 +201,7 @@ class SwiftKVCModel: NSObject {
                         //处理数组是字典数组的情况
                         if let arr = value as? [[String:Any]] {
                             if arr.count > 0 {
-                                if handleArray(forKey: key, ptv: ptv, value: arr) {
-                                    return true
-                                }
+                                return handleArray(forKey: key, ptv: ptv, value: arr)
                             }else{
                                 self.object.setValue([], forKey: key)
                                 return true
@@ -359,8 +357,13 @@ class SwiftKVCModel: NSObject {
                 }
                 self.object.setValue(modelArr, forKey: key)
                 return true
+            }else{
+                print("\(type(of: self.model))-KVC:对应属性:\(key)的类型为array,但arrayProperTypeList与它匹配的类型没有遵循SwiftKVCModelProtocol协议，取消赋值.")
+                return true
             }
+        }else{
+            print("\(type(of: self.model))-KVC:对应属性:\(key)的类型为array,但arrayProperTypeList没有与它匹配的类型，取消赋值.")
+            return true
         }
-        return false
     }
 }
